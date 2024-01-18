@@ -21,6 +21,41 @@ import { Component, OnInit } from '@angular/core';
                 <div *ngSwitchCase="'green'">You picked green color</div>
                 <div *ngSwitchDefault>You did not picked any color</div>
               </div>
+
+              <div *ngFor="let color of colors; index as i">
+                 <h2>
+                  {{i}}
+                 {{color}}
+                 </h2> 
+            </div>
+
+            <div *ngFor="let color of colors; first as f">
+                 <h2>
+                  {{f}}
+                 {{color}}
+                 </h2> 
+            </div>
+
+            <div *ngFor="let color of colors; last as l">
+                 <h2>
+                  {{l}}
+                 {{color}}
+                 </h2> 
+            </div>
+
+            <div *ngFor="let color of colors; odd as o">
+                 <h2>
+                  {{o}}
+                 {{color}}
+                 </h2> 
+            </div>
+
+            <div *ngFor="let color of colors; even as e">
+                 <h2>
+                  {{e}}
+                 {{color}}
+                 </h2> 
+            </div>
        
                `
                ,
@@ -31,6 +66,9 @@ export class TestComponent implements OnInit {
   displayName = false;
 
   public color = "orange";
+
+  // declaring an array of colours
+  public colors = ["red","blue","green","yellow"]
 
   constructor(){}
 
